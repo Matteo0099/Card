@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+:root {  
+    --color-1: #202020;  
+    --color-2: #f9f9f9;  
+    --color-3: #cdcdcd;
+    --button: #66ff00b5;
+}  
+
+html, body {
+    font-family: 'Ubuntu', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    text-size-adjust: 1;
+    letter-spacing: .4px;
+}
+
+body {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5 !important;
+    transition: .5 ease-in-out;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: calc(100vh - 100px);
+    overflow: hidden;
+}
+
+.container.main{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    max-width: 700px !important;
+    position: relative;
+    background: whitesmoke !important;
+}
+
+.card.glass {
+    backdrop-filter: blur(12px) !important;
+}
+
+.card-footer-item:not(:last-child) {
+    border-left: none !important;
+}
+
+.card-header {
+    box-shadow: 0 .15em .5em rgba(10, 10, 10, 0.05) !important;
+}
+
+.content {
+    margin-left: .7rem;
+    margin-right: .2rem;
+}
+
+.text-muted {
+    /*paragraph*/
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(16px, 3vw, 22px);
+    color: #535353;
+    margin-top: .75rem;
+}
+
+.card-text {
+    font-weight: 400;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+h1 span.typer {
+    color: var(--button) !important;
+}
+
+.card-content h1 {
+    margin-top: .5rem !important;
+    margin-bottom: 1.65rem !important;
+}
+
+p.card-header-title {
+    color: var(--color-3);
+    margin-left: .75rem !important;
+}
+
+/*mouse hover*/
+.nav-text {
+    position: absolute;
+    visibility: hidden;
+    width: 0px;
+    font-size: 12px;
+    border-radius: 6px;
+    transform: translate(75%, -130%);
+    transition: all .175ms;
+}
+
+a.card-footer-item:hover span.nav-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    width: max-content;
+    height: 24px;
+    background-color: var(--color-1); /*#f9f9f954*/
+    color: var(--color-2);
+}
+/* end mouse hover*/
+
+/*card footer*/
+a.card-footer-item {
+    color:#202020;
+}
+
+a.card-footer-item:hover {
+    color: var(--button);
+}
+/****/
+
+/*dark mode*/
+.mini-container {
+    float: right;
+    margin: 1rem;
+}
+
+.switch {  
+    position: relative;  
+    display: inline-block;  
+    width: 3.5rem;  
+    height: 1.8rem; 
+}  
+
+.switch__input {  
+    opacity: 0;  
+    width: 0;  
+    height: 0;  
+} 
+
+.switch__slider {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background: var(--button);  
+    border-radius: 1rem;  
+    transition: background 0.2s;  
+    cursor: pointer;  
+}  
+
+.switch__slider::before {  
+    content: "";  
+    position: absolute;  
+    left: 0.2rem;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    height: 1.4rem;  
+    width: 1.4rem;  
+    border-radius: 1.4rem;  
+    background: var(--color-2);  
+    transition: transform 0.2s, width 0.2s, background 0.2s;  
+}   
+
+.switch__input:checked + .switch__slider {  
+    background-color: var(--color-3);  
+}  
+
+.switch__input:not(:checked):active + .switch__slider::before {  
+    width: 2.4rem;  
+}  
+
+.switch__input:checked:active + .switch__slider::before {  
+    transform: translate(1rem, -50%); 
+    width: 2.4rem;  
+}  
+
+.switch__input:checked + .switch__slider::before {  
+    transform: translate(1.8rem, -50%); 
+}
+/*end dark mode*/
+
+footer {
+    bottom: 0;
+    grid-area: footer;
+}
+
+footer #copyright {
+    color: #a5a5a5;
+}
+
+.card-footer-item {
+    padding: 1.1em !important;
+}
+
+footer span i {
+    font-style: italic;
+    letter-spacing: .4px;
+}
