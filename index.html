@@ -14,16 +14,16 @@
     </head>
     
     <body>
-        <header>
-            <div class="mini-container">
-                <label class="switch">  
-                    <input class="switch__input" type="checkbox" data-theme-toggle>  
-                    <span class="switch__slider"></span>  
-                </label>  
-            </div>
-        </header>
+        <div class="mini-container">
+            <button style="--animation-order:26;" class="theme animate-in" onclick="changeTheme();" aria-label="change theme">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path d="M21 12.9755C20.8427 14.6778 20.2039 16.3 19.1583 17.6523C18.1127 19.0047 16.7035 20.0313 15.0957 20.6121C13.4879 21.1928 11.748 21.3037 10.0795 20.9316C8.41104 20.5596 6.88302 19.7201 5.67425 18.5113C4.46548 17.3026 3.62596 15.7745 3.25393 14.106C2.8819 12.4376 2.99274 10.6976 3.57348 9.08984C4.15423 7.48206 5.18085 6.07291 6.53324 5.0273C7.88562 3.98169 9.50782 3.34285 11.21 3.18555C10.2134 4.53381 9.73387 6.195 9.85856 7.86696C9.98324 9.53893 10.7039 11.1106 11.8894 12.2961C13.075 13.4817 14.6466 14.2023 16.3186 14.327C17.9906 14.4517 19.6518 13.9721 21 12.9755V12.9755Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>-->
+                <i data-feather="moon" class="theme-icon"></i>
+            </button>	 
+        </div>
 
-        <main class="py-6 flex flex-col justify-center sm:py-12 overflow-hidden">
+        <main class="flex flex-col justify-center overflow-hidden is-size-7-mobile">
             <div class="container main">
                 <div class="card glass">
                     <header class="card-header">
@@ -40,7 +40,7 @@
                     <div class="card-content">
                         <div class="content">
                             <h1>Matteo is
-                                <span class="typer" id="main" data-words="funny, collaborative, explosive, avaible" data-delay="100" data-deleteDelay="1000"></span>
+                                <span class="typer" id="main" data-words="funny, explosive, avaible" data-delay="150" data-deleteDelay="1000"></span>
                                 <span class="cursor" data-owner="main"></span>
                             </h1>
                             <p class="card-text">Mi chiamo Matteo, programmo nel tempo libero e mi vedrai spesso sulla mia bici.</p>
@@ -85,13 +85,18 @@
             </div>
         </main>
 
-        <footer class="has-text-centered is-flex-align-items-flex-end mt-auto">
+        <footer class="has-text-centered is-flex-align-items-flex-end mt-auto mb-2">
             <small>
               <span id="copyright">Copyright @2022&ensp;<i>Manià Matteo</i></span>
             </small>
         </footer>
 
-        <!--script vari-->
+        <!--icons switch-->
+        <script>
+            feather.replace()
+        </script>
+        <!--icon pack-->
+        <script src="https://unpkg.com/feather-icons"></script>
         <script src="src/toggle.js"></script>
         <script src="src/script.js"></script>
         <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
