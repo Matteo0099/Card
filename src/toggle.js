@@ -13,22 +13,19 @@ var currentTheme;
 function checkTheme() {
 	currentTheme = localStorage.getItem("theme");
 	console.log(currentTheme);
-			
+
 	if (currentTheme === null) {
-		console.log("set to light.");
 		localStorage.setItem("theme", "light-theme");
 		document.body.classList.add("light-theme");
 		sunToMoon();
 
-		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) 		{
-	    console.log("set to dark");
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			document.body.classList.add("dark-theme");
 			moonToSun();
 			localStorage.setItem("theme", "dark-theme");
 		}
 
-		else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) 		{
-	    console.log("set to light");
+		else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
 			document.body.classList.add("light-theme");
 			sunToMoon();
 			localStorage.setItem("theme", "light-theme");
@@ -36,13 +33,11 @@ function checkTheme() {
 	}
 
 	else if (currentTheme === "light-theme") {
-		console.log("set to light");
 		document.body.classList.add("light-theme");
 		sunToMoon();
 	}
 
 	else if (currentTheme === "dark-theme") {
-		console.log("set to dark");
 		document.body.classList.add("dark-theme");
 		moonToSun();
 	}
@@ -54,25 +49,23 @@ function checkTheme() {
 
 function changeTheme() {
 	currentTheme = localStorage.getItem("theme");
-	console.log("theme before change:")
 	console.log(currentTheme);
 
 	if (currentTheme === "light-theme") {
 		document.body.classList.remove("light-theme");
 		document.body.classList.add("dark-theme");
-		localStorage.setItem("theme", "dark-theme");	
+		localStorage.setItem("theme", "dark-theme");
 		moonToSun();
 	}
 
 	else if (currentTheme === "dark-theme") {
 		document.body.classList.remove("dark-theme");
 		document.body.classList.add("light-theme");
-		localStorage.setItem("theme", "light-theme");	
+		localStorage.setItem("theme", "light-theme");
 		sunToMoon();
 	}
 
 	currentTheme = localStorage.getItem("theme");
-	console.log("current theme after change:")
 	console.log(currentTheme);
 }
 

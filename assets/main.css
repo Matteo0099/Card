@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*bulma import*/
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
 *, 
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    margin: 0;
 } 
 
 html, body {
     font-family: 'Ubuntu', sans-serif !important;
     margin: 0;
     padding: 0;
-    text-size-adjust: 1;
     letter-spacing: .4px;
-    overflow-y: hidden !important;
+    overflow-x: hidden;
 }
 
 body {
@@ -41,7 +43,6 @@ body {
 }
 
 .mini-container {
-    
     flex-direction: row;
     display: flex;
     justify-content: right;
@@ -103,7 +104,7 @@ main {
 }
 
 .card {
-    max-width: 700px !important;
+    max-width: 550px !important;
     background: whitesmoke !important;
 }
 
