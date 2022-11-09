@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vizuaalog/bulmajs": "^0.12.2",
     "bulma": "^0.9.4"
   }
 }
